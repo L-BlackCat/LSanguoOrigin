@@ -8,5 +8,5 @@ package hero;
 public enum HeroMgr {
     Instance;
 
-    
+
 }
