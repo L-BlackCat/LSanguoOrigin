@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LSanguoOrigin_Server.iml" filepath="$PROJECT_DIR$/LSanguoOrigin_Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LSanguoOrigin.iml" filepath="$PROJECT_DIR$/LSanguoOrigin.iml" />
     </modules>
   </component>
 </project>
