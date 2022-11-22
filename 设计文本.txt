@@ -1,0 +1,71 @@
+英雄数据库表:
+    CREATE TABLE `user_hero`(
+      `uid` bigint(20) NOT NULL DEFAULT '0' COMMENT '玩家唯一id',
+      `hero_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '英雄唯一id(唯一)',
+      `hero_type` int(11) NOT NULL DEFAULT '0' COMMENT '英雄职业',
+      `level` int(11) NOT NULL DEFAULT '0' COMMENT '英雄等级',
+      `stage` int(11) NOT NULL DEFAULT '0' COMMENT '英雄阶级',
+      `li_liang` int(11) NOT NULL DEFAULT '0' COMMENT '英雄力量天赋值',
+      `ti_li` int(11) NOT NULL DEFAULT '0' COMMENT '英雄力量天赋值',
+      `ji_qiao` int(11) NOT NULL DEFAULT '0' COMMENT '英雄技巧天赋值',
+      `min_jie` int(11) NOT NULL DEFAULT '0' COMMENT '英雄敏捷天赋值',
+      `gan_zhi` int(11) NOT NULL DEFAULT '0' COMMENT '英雄感知天赋值',
+      `yi_zhi` int(11) NOT NULL DEFAULT '0' COMMENT '英雄意志天赋值',
+      PRIMARY KEY (`uid`,`hero_id`)
+    )
+
+天赋值：
+    力量
+    体力
+    技巧
+    敏捷
+    感知（待定）
+    意志（待定）
+
+血统：(待定)
+  精灵
+  帝国人
+  原住民
+  矮人
+  ...
+
+
+装备表:
+    CREATE TABLE `user_equip`(
+      `equip_uid` bigint(20) NOT NULL DEFAULT '0' COMMENT '装备唯一id(唯一)',
+      `equip_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '装备id(通用)',
+      `uid` bigint(20) NOT NULL DEFAULT '0' COMMENT '玩家唯一id',
+      `hero_id` bigint(20) NOT NULL DEFAULT '0' COMMENT '英雄唯一id(唯一)',
+       PRIMARY KEY (`equip_uid`),
+       INDEX (`uid`)
+    )
+      `part` int(11) NOT NULL DEFAULT '0' COMMENT '装备的部位',
+装备强化值：
+    锋利
+    增重
+    加长
+
+
+
+属性
+    攻击
+    生命（血量）
+    防御
+    速度
+    命中值
+    暴击值
+    负重
+
+    力量
+    体力
+    敏捷
+    技巧
+    感知（待定）
+    意志（待定）
+
+转换：
+    两点力量转化1攻击力
+    两点体质转化1生命值和3负重值
+    1技巧转化1命中值和1暴击值
+    被动技能
+    主动技能
